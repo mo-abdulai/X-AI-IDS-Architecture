@@ -49,7 +49,7 @@ Modern IDS systems face challenges such as:
 The project utilizes the following benchmark datasets:
 
 1. **NSL-KDD**: A well-known dataset for network intrusion detection research.
-2. **CICIDS-2017**: Represents realistic modern cyberattack scenarios.
+1. **CICIDS-2017**: Represents realistic modern cyberattack scenarios.
 
 ---
 
@@ -58,16 +58,21 @@ The project utilizes the following benchmark datasets:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/XAI-IDS-Architecture.git
+   git clone https://github.com/mo-abdulai/XAI-IDS-Architecture.git
    ```
 
 2. Navigate to the project directory:
 
+    ```bash
     cd XAI-IDS-Architecture
+    ```
 
-    Install the required Python packages:
+3. Install the required Python packages:
 
-    pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt 
+    ```
+
 
 ## 🧪 Usage
 
@@ -85,19 +90,19 @@ The project utilizes the following benchmark datasets:
 
 ## 📈 Evaluation Metrics
 
-1. Accuracy: Measures correct predictions.
-2. F1-Score: Evaluates precision and recall balance.
-3. Transparency: Provided by SHAP and LIME explanations.
-4. Scalability: Tested on real-time simulated traffic.
+- Accuracy: Measures correct predictions.
+- F1-Score: Evaluates precision and recall balance.
+- Transparency: Provided by SHAP and LIME explanations.
+- Scalability: Tested on real-time simulated traffic.
 
 ## 🧩 Future Work
 
-1. Extend support for encrypted traffic analysis.
-2. Improve scalability for large-scale distributed networks.
-3. Integrate real-time monitoring and alerting.
+- Extend support for encrypted traffic analysis.
+- Improve scalability for large-scale distributed networks.
+- Integrate real-time monitoring and alerting.
 
 ## 📝 References
 
-1. S. Mane and D. Rao, "Explaining Network Intrusion Detection System Using Explainable AI Framework," Persistent Systems Limited, India, 2020.
-2. F. Wei, H. Li, Z. Zhao, and H. Hu, "xNIDS: Explaining Deep Learning-based Network Intrusion Detection Systems for Active Intrusion Responses," Proceedings of the 32nd USENIX Security Symposium, Anaheim, CA, 2023.
- 3. C. Molnar, Interpretable Machine Learning: A Guide for Making Black Box Models Explainable, 2020. 
+- S. Mane and D. Rao, "Explaining Network Intrusion Detection System Using Explainable AI Framework," Persistent Systems Limited, India, 2020.
+- F. Wei, H. Li, Z. Zhao, and H. Hu, "xNIDS: Explaining Deep Learning-based Network Intrusion Detection Systems for Active Intrusion Responses," Proceedings of the 32nd USENIX Security Symposium, Anaheim, CA, 2023.
+- C. Molnar, Interpretable Machine Learning: A Guide for Making Black Box Models Explainable, 2020. 
