@@ -96,7 +96,7 @@ The project utilizes the following benchmark datasets:
 2. Improve scalability for large-scale distributed networks.
 3. Integrate real-time monitoring and alerting.
 
-📝 References
+## 📝 References
 
 1. S. Mane and D. Rao, "Explaining Network Intrusion Detection System Using Explainable AI Framework," Persistent Systems Limited, India, 2020.
 2. F. Wei, H. Li, Z. Zhao, and H. Hu, "xNIDS: Explaining Deep Learning-based Network Intrusion Detection Systems for Active Intrusion Responses," Proceedings of the 32nd USENIX Security Symposium, Anaheim, CA, 2023.
