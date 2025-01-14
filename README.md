@@ -22,6 +22,29 @@ Modern IDS systems face challenges such as:
 - Validate the architecture using benchmark datasets such as NSL-KDD and CICIDS-2017.
 - Support analysts in mitigating threats with understandable, actionable insights.
 
+## Design Architecture
+
+Below is the design architecture of the **XAI-IDS-Architecture** project, which outlines the three phases of the system:
+
+1. **Pre-Modeling Phase**: 
+   - Parameter selection
+   - Data visualization
+   - Feature engineering
+   - Preprocessing for a high-quality dataset
+
+2. **Modeling Phase**:
+   - Machine learning model training and evaluation
+   - Quality metrics include F1-Score and topographical quantization
+
+3. **Post-Modeling Explainability**:
+   - Explanation interfaces provide local/global feature significance and ML unit visualization
+   - Users receive actionable explanations to make decisions and handle incorrect predictions
+
+![Design Architecture](images/architecture.png)
+
+This architecture ensures a systematic approach to creating an interpretable and effective intrusion detection system.
+
+
 ## 🛠️ Features
 
 - **Explainable AI Integration**: Use SHAP and LIME to make predictions interpretable.
