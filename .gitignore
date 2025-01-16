@@ -2,3 +2,7 @@
 *.pyc
 *.txt
 *.arff
+
+
+Datasets/CIC-IDS-2017/
+Datasets/NSL-KDD/
