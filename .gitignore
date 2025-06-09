@@ -4,10 +4,10 @@
 *.arff
 
 
-Datasets/CIC-IDS-2017/
-Datasets/NSL-KDD/
+/Datasets/
 .ipynb_checkpoints
-
+*.csv
+*.joblib
 
 
 .env
