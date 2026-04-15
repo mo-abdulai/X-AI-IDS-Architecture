@@ -47,25 +47,29 @@ This architecture ensures a systematic approach to creating an interpretable and
 
 ## 🛠️ Features
 
-- **Explainable AI Integration**: Use SHAP and LIME to make predictions interpretable.
-- **Support for Multiple Attack Types**: Includes DoS, phishing, SQL injection, and zero-day attacks.
-- **Evaluation Metrics**: Assesses accuracy, interpretability, scalability, and adaptability.
-- **Scalability for Distributed Networks**: Efficient handling of real-time traffic.
+- **Notebook-Driven Workflow**: End-to-end pipeline is organized as phase-based Jupyter notebooks.
+- **Multi-Class IDS Modeling**: Supports 5-class NSL-KDD and CICIDS-2017 experiments.
+- **Imbalance-Aware Training**: Current NSL-KDD XGBoost flow supports class weighting and optional SMOTE.
+- **Research-Ready Evaluation**: Includes confusion matrices (raw + normalized), class-wise PR/F1, macro/weighted summaries, and ROC-AUC.
+- **Explainability Support**: SHAP/LIME-based post-modeling analysis notebooks.
 
 ## 🗂️ Project Structure
 
 ```plaintext
-├── 1_Pre-Modeling-Phase
-│   ├── Data Preprocessing and Feature Engineering
-├── 2_Modeling-Phase
-│   ├── Model Training and Evaluation
-│   ├── Random Forest, XGBoost, and Explainability Models
-├── 3_Post-Modeling-Phase
-│   ├── Interpretability Analysis using SHAP and LIME
-│   ├── Comparative Analysis with Traditional IDS
-├── Datasets
-│   ├── NSL-KDD and CICIDS-2017 Benchmark Data
-├── README.md
+├── 1_Pre-Modeling-Phase/
+│   ├── Data_Analysis_and_preprocessing_NSL-KDD/
+│   └── Data_Analysis_and_Preprocessing_CICIDS-2017/
+├── 2_Modeling-Phase/
+│   ├── Models_NSL-KDD/
+│   ├── Models_CICIDS-2017/
+│   ├── Model Comparisons/
+│   └── train_and_test_datasets/
+├── 3_Post-Modeling-Phase/
+│   ├── explainability_Models/
+│   └── Trained_ML_models/
+├── Datasets/
+├── AGENTS.md
+└── README.md
 ```
 ## 📊 Datasets
 
@@ -99,24 +103,47 @@ The project utilizes the following benchmark datasets:
 
 ## 🧪 Usage
 
-1. Preprocess the datasets:
+### Current Flow (Notebook-Based)
 
-    ```python 1_Pre-Modeling-Phase/data_preprocessing.py```
+1. **Preprocess and analyze data**
+   - NSL-KDD notebooks:
+     - `1_Pre-Modeling-Phase/Data_Analysis_and_preprocessing_NSL-KDD/`
+   - CICIDS-2017 notebooks:
+     - `1_Pre-Modeling-Phase/Data_Analysis_and_Preprocessing_CICIDS-2017/`
 
-2. Train models and evaluate performance:
+2. **Train/evaluate models**
+   - NSL-KDD modeling notebooks:
+     - `2_Modeling-Phase/Models_NSL-KDD/`
+   - CICIDS-2017 modeling notebooks:
+     - `2_Modeling-Phase/Models_CICIDS-2017/`
 
-    ```python 2_Modeling-Phase/train_model.py```
+3. **Run the current NSL-KDD XGBoost flow**
+   - Notebook:
+     - `2_Modeling-Phase/Models_NSL-KDD/NSL-KDD_XGBoost.ipynb`
+   - Sections include:
+     - Load train/test CSVs
+     - Split features/labels and fixed 5-class order (`Normal, DoS, Probe, R2L, U2R`)
+     - Class imbalance controls (`USE_CLASS_WEIGHTS`, `USE_SMOTE`)
+     - XGBoost training
+     - Evaluation:
+       - raw confusion matrix
+       - row-normalized confusion matrix
+       - class-wise precision/recall/F1
+       - sklearn classification report
+       - macro/micro ROC-AUC
 
-3. Perform explainability analysis:
-
-    ```python 3_Post-Modeling-Phase/xai_analysis.py```
+4. **Run explainability notebooks**
+   - `3_Post-Modeling-Phase/explainability_Models/`
 
 ## 📈 Evaluation Metrics
 
-- Accuracy: Measures correct predictions.
-- F1-Score: Evaluates precision and recall balance.
-- Transparency: Provided by SHAP and LIME explanations.
-- Scalability: Tested on real-time simulated traffic.
+- Accuracy
+- Class-wise Precision, Recall, and F1-score
+- Macro and weighted averages (from `classification_report`)
+- Confusion matrix (raw counts)
+- Confusion matrix (row-normalized)
+- Macro and micro ROC-AUC (OVR)
+- Explainability outputs via SHAP/LIME notebooks
 
 ## 🧩 Future Work
 
